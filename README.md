@@ -1,4 +1,6 @@
 # Segundo_Parcial
+# Perceptron Netlogo
+
 
 # Calculadora basada en paradigmas de agentes
 ¿Cómo interactúan los agentes?
