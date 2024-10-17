@@ -6,7 +6,7 @@ Respuesta corta: No se comunican directamente entre ellos. La comunicación entr
 
 Cuando el usuario ingresa una expresión, por ejemplo, 2 + 3 * 5, el modelo lo procesa de la siguiente manera:
 
-Tokenización: El modelo divide la expresión en partes (números y operadores), en este caso: ['2', '+', '3', '*', '5'].
+ El modelo divide la expresión en partes (números y operadores), en este caso: ['2', '+', '3', '*', '5'].
 Distribución de operaciones:
 Para el +, el agente suma se encarga de procesar la suma de los números que le asignan.
 Para el *, el agente multiplicación procesa la multiplicación de los números asignados.
