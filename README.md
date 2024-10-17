@@ -1,5 +1,9 @@
 # Segundo_Parcial
 
+# Calculadora basada en paradigmas de agentes
+
+
+
 # Calculadora_cientifica
 1.Encapsulamiento
 El encapsulamiento es sobre mantener los detalles internos de una clase ocultos y permitir que se acceda a ellos de manera controlada. En la calculadora:
