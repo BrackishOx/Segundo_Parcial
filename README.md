@@ -15,9 +15,9 @@ Esto asegura que la lógica de la calculadora permanezca segura y se pueda cambi
 
 ```
 2.Herencia
-La herencia permite crear una nueva clase que comparte propiedades y métodos de otra clase. En mi calculadora, esto se ve así:
+La herencia permite crear una nueva clase que comparte propiedades y métodos de otra clase En mi calculadora esto se ve así:
 
-La clase Calculadora Cientifica hereda de Calculadora, así que puede usar todas las operaciones básicas sin tener que reescribir el código.
+La clase Calculadora Cientifica hereda de Calculadora así que puede usar todas las operaciones básicas sin tener que reescribir el código.
 
  Calculadora Cientifica agrega nuevas funciones, como las trigonométricas (seno, coseno), lo que muestra cómo la herencia ayuda a crear clases más específicas a partir de clases más generales.
  
