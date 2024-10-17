@@ -30,3 +30,19 @@ class CalculadoraCientifica : Calculadora() {
     // Otras funciones científicas...
 }
 ```
+3.Poliformismo
+El polimorfismo permite que una clase tenga diferentes formas, lo que se traduce en la capacidad de usar el mismo nombre de método para hacer cosas diferentes. En la calculadora, esto se aplica así:
+
+ La clase Calculadora puede tener varios métodos sumar que acepten distintos tipos de datos (como enteros y dobles), lo que significa que el mismo método puede funcionar para diferentes tipos.
+
+ Aunque no lo implemente en este caso, se podría crear una interfaz que defina métodos como ejecutar(), y diferentes clases podrían implementar esto para realizar diferentes cálculos.
+```
+fun sumar(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sumar(a: Double, b: Double): Double {
+    return a + b
+}
+```
+ 
