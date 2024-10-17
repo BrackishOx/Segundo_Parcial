@@ -13,6 +13,10 @@ Para el *, el agente multiplicación procesa la multiplicación de los números 
 Resultados: Los agentes no hablan entre sí, sino que cada uno recibe una parte de la operación, la resuelve y le devuelve el resultado al modelo, que junta todos los resultados para obtener el valor final.
 Por ejemplo, en la expresión 2 + 3 * 5, primero se resuelve 3 * 5 (usando el agente multiplicación), que devuelve 15, y luego se suma 2 + 15 (usando el agente suma), resultando en 17.
 
+Modelo (CalculadoraModel): Es el cerebro de la calculadora. Recibe la expresión matemática, la descompone en operaciones más pequeñas, y asigna esas operaciones a los agentes. Luego, reúne los resultados parciales y calcula el resultado final.
+
+Agentes: Son los encargados de hacer cálculos específicos. Cada agente es responsable de una sola operación:
+
 
 # Calculadora_cientifica
 1.Encapsulamiento
