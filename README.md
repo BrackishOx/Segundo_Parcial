@@ -1,21 +1,23 @@
 # Segundo_Parcial
 
 # Calculadora basada en paradigmas de agentes
-¿Cómo se comunican los agentes?
-Respuesta corta: No se comunican directamente entre ellos. La comunicación entre los agentes y el sistema ocurre a través de un modelo central, que es el encargado de gestionar la expresión matemática y delegar las operaciones a cada agente correspondiente.
+¿Cómo interactúan los agentes?
 
-Cuando el usuario ingresa una expresión, por ejemplo, 2 + 3 * 5, el modelo lo procesa de la siguiente manera:
+En resumen, los agentes no se comunican entre sí de manera directa. En cambio, la interacción se gestiona a través de un modelo central. Este modelo es responsable de recibir la expresión matemática, dividirla en partes y delegar las operaciones a los agentes correspondientes.
 
- El modelo divide la expresión en partes (números y operadores), en este caso: ['2', '+', '3', '*', '5'].
-Distribución de operaciones:
-Para el +, el agente suma se encarga de procesar la suma de los números que le asignan.
-Para el *, el agente multiplicación procesa la multiplicación de los números asignados.
-Resultados: Los agentes no hablan entre sí, sino que cada uno recibe una parte de la operación, la resuelve y le devuelve el resultado al modelo, que junta todos los resultados para obtener el valor final.
-Por ejemplo, en la expresión 2 + 3 * 5, primero se resuelve 3 * 5 (usando el agente multiplicación), que devuelve 15, y luego se suma 2 + 15 (usando el agente suma), resultando en 17.
+Por ejemplo, cuando se ingresa una expresión como "2 + 3 * 5", el modelo sigue los siguientes pasos:
 
-Modelo (CalculadoraModel): Es el cerebro de la calculadora. Recibe la expresión matemática, la descompone en operaciones más pequeñas, y asigna esas operaciones a los agentes. Luego, reúne los resultados parciales y calcula el resultado final.
+Primero, se divide la expresión en sus componentes (números y operadores): ['2', '+', '3', '*', '5'].
 
-Agentes: Son los encargados de hacer cálculos específicos. Cada agente es responsable de una sola operación:
+Luego, el modelo distribuye las operaciones:
+- El agente encargado de la suma se ocupará de procesar la operación '+', utilizando los números asignados.
+- El agente de multiplicación realizará la operación '*', también con los números que le corresponden.
+
+Cada agente trabaja de forma independiente. Resuelven su parte de la operación y envían los resultados al modelo central, que se encarga de combinarlos para obtener el resultado final. En el ejemplo "2 + 3 * 5", primero se ejecuta la multiplicación, lo que da como resultado 15. Posteriormente, se realiza la suma, obteniendo 17 como resultado final.
+
+El **Modelo (CalculadoraModel)** actúa como el núcleo del sistema. Recibe la expresión, la desglosa en operaciones más simples, y asigna dichas operaciones a los agentes correspondientes. Finalmente, une los resultados parciales para obtener el cálculo completo.
+
+Los **Agentes** son los responsables de ejecutar operaciones específicas. Cada uno de ellos se especializa en una operación matemática en particular, como suma, resta, multiplicación o división.
 
 
 # Calculadora_cientifica
