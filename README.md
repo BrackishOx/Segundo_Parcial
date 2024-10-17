@@ -8,11 +8,10 @@ El encapsulamiento es sobre mantener los detalles internos de una clase ocultos 
 Metodos Publicos: Los métodos que permiten hacer las operaciones son públicos, así que cualquiera puede usarlos sin tener que entender cómo funcionan por dentro.
 Esto asegura que la lógica de la calculadora permanezca segura y se pueda cambiar sin afectar a los usuarios.
 
-''''open class Calculadora {
+```open class Calculadora {
     fun sumar(a: Double, b: Double): Double {
         return a + b
     }
 
-    // Otros métodos de operaciones...
-}
-''''
+```
+
