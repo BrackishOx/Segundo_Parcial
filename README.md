@@ -1,7 +1,17 @@
 # Segundo_Parcial
 
 # Calculadora basada en paradigmas de agentes
+¿Cómo se comunican los agentes?
+Respuesta corta: No se comunican directamente entre ellos. La comunicación entre los agentes y el sistema ocurre a través de un modelo central, que es el encargado de gestionar la expresión matemática y delegar las operaciones a cada agente correspondiente.
 
+Cuando el usuario ingresa una expresión, por ejemplo, 2 + 3 * 5, el modelo lo procesa de la siguiente manera:
+
+Tokenización: El modelo divide la expresión en partes (números y operadores), en este caso: ['2', '+', '3', '*', '5'].
+Distribución de operaciones:
+Para el +, el agente suma se encarga de procesar la suma de los números que le asignan.
+Para el *, el agente multiplicación procesa la multiplicación de los números asignados.
+Resultados: Los agentes no hablan entre sí, sino que cada uno recibe una parte de la operación, la resuelve y le devuelve el resultado al modelo, que junta todos los resultados para obtener el valor final.
+Por ejemplo, en la expresión 2 + 3 * 5, primero se resuelve 3 * 5 (usando el agente multiplicación), que devuelve 15, y luego se suma 2 + 15 (usando el agente suma), resultando en 17.
 
 
 # Calculadora_cientifica
