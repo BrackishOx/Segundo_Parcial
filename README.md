@@ -49,7 +49,7 @@ class CalculadoraCientifica : Calculadora() {
         return Math.sin(x)
     }
 
-    // Otras funciones científicas...
+   
 }
 ```
 3.Poliformismo
