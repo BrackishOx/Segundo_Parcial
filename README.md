@@ -3,9 +3,9 @@
 
 
 # Calculadora basada en paradigmas de agentes
-¿Cómo interactúan los agentes?
+Interaccion de Agentes
 
-En resumen, los agentes no se comunican entre sí de manera directa. En cambio, la interacción se gestiona a través de un modelo central. Este modelo es responsable de recibir la expresión matemática, dividirla en partes y delegar las operaciones a los agentes correspondientes.
+Los agentes no se comunican entre sí de manera directa en cambio la interacción se gestiona a través de un modelo central este modelo es responsable de recibir la expresión matemática dividirla en partes y delegar las operaciones a los agentes correspondientes.
 
 Por ejemplo, cuando se ingresa una expresión como "2 + 3 * 5", el modelo sigue los siguientes pasos:
 
