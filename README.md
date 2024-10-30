@@ -1,47 +1,42 @@
  Segundo_Parcial
 # Perceptron Netlogo
-Aquí tienes una versión ampliada del informe con la descripción de la interfaz y un análisis sobre cómo los parámetros afectan los resultados del perceptrón:
-
----
 
 **Informe sobre el Perceptrón y su Implementación en NetLogo**
 
 1. **Introducción al Perceptrón**  
-   El perceptrón es uno de los modelos de redes neuronales más simples, diseñado para realizar tareas de clasificación binaria. Funciona como un clasificador lineal que asigna una entrada a una de dos clases. Para ello, ajusta un conjunto de pesos que representan la importancia de cada característica de entrada. Su salida se determina mediante una combinación lineal de las entradas ponderadas, aplicando una función de activación para producir un valor binario.
-   
-3. **Implementación en NetLogo**  
-   La implementación del perceptrón se realizó en NetLogo versión 3D, donde se modelaron puntos en un espacio tridimensional para clasificar de acuerdo con funciones objetivo seleccionadas (por ejemplo, AND o XOR). La interfaz desarrollada cuenta con varios elementos interactivos para facilitar el proceso de entrenamiento y prueba, descritos a continuación.
+   El perceptrón es una de las redes neuronales más sencillas, creada para resolver problemas de clasificación binaria (es decir, separar datos en dos grupos). Funciona como un clasificador que decide si una entrada pertenece a una clase o a otra, ajustando ciertos valores llamados “pesos” para darle más o menos importancia a cada característica de la entrada. La salida del perceptrón se calcula tomando una combinación de estas entradas ponderadas y pasándolas por una función que produce un valor binario (1 o -1, por ejemplo).
+
+2. **Implementación en NetLogo**  
+   En esta implementación, utilizamos NetLogo en su versión 3D para modelar puntos en un espacio tridimensional. La interfaz nos permite controlar el entrenamiento y probar el modelo de forma interactiva.
 
    **Descripción de la Interfaz**:
    - **Botones**:
-     - `setup`: Inicializa la simulación y prepara los datos para el entrenamiento.
-     - `train`: Realiza el entrenamiento completo del perceptrón durante múltiples épocas.
-     - `train-once`: Ejecuta una única iteración de entrenamiento, útil para observar cambios paso a paso.
+     - `setup`: Inicializa la simulación y prepara los datos para comenzar el entrenamiento.
+     - `train`: Realiza el entrenamiento completo, pasando varias veces por los datos.
+     - `train-once`: Ejecuta una única iteración de entrenamiento, permitiendo ver los ajustes paso a paso.
    - **Deslizadores**:
-     - **learning-rate**: Define la tasa de aprendizaje, la cual está configurada en 0.5 en esta simulación. Esta tasa determina la magnitud de los ajustes de los pesos en cada iteración.
-     - **examples-per-epoch**: Controla el número de ejemplos procesados por época, configurado en 500. Este parámetro impacta la cantidad de datos que el perceptrón evalúa antes de actualizar los pesos.
-   - **Gráfica "Error vs. Epochs"**: Proporciona una visualización del error a lo largo de las épocas, mostrando cómo se reduce a medida que el perceptrón ajusta sus pesos y mejora en la clasificación.
+     - **learning-rate**: Define cuánto se ajustan los pesos en cada paso. En este caso, está configurado en 0.5, lo cual permite cambios significativos en cada iteración.
+     - **examples-per-epoch**: Controla cuántos ejemplos se procesan en cada ciclo de entrenamiento, configurado en 500, lo que permite usar muchos datos y hacer el aprendizaje más robusto.
+   - **Gráfica "Error vs. Epochs"**: Muestra cómo el error disminuye a lo largo de las épocas, dando una visualización del aprendizaje del modelo.
    - **Panel de Prueba**:
-     - Entradas `input-1` y `input-2`: Permiten introducir valores para probar el modelo y observar la salida `output` en tiempo real. En este caso, el output observado es -1.
+     - Entradas `input-1` y `input-2`: Permiten probar el perceptrón con diferentes valores de entrada y ver la clasificación que produce (`output`).
    - **Opciones de Configuración**:
-     - **target-function**: En este ejemplo, se ha seleccionado `xor` como función objetivo, que es un reto para el perceptrón dado que XOR no es linealmente separable.
-     - **show-weights**: Permite visualizar el cambio de los pesos durante el entrenamiento, útil para entender cómo se ajustan para minimizar el error.
+     - **target-function**: Aquí seleccionamos `xor` como la función objetivo, un caso complicado porque XOR no es linealmente separable (no se puede dividir con una simple línea o plano).
+     - **show-weights**: Permite ver cómo cambian los pesos durante el entrenamiento, para entender mejor cómo el perceptrón se ajusta a los datos.
 
-4. **Análisis de Parámetros y su Impacto en el Resultado**  
-   - **Tasa de Aprendizaje (learning-rate)**: Con un valor de 0.5, el perceptrón hace ajustes significativos en cada iteración. Una tasa de aprendizaje alta puede llevar a una convergencia rápida, pero también puede hacer que el modelo sobrepase la solución óptima, oscilando alrededor de la clasificación ideal. Para el problema de XOR, un valor más bajo podría permitir un ajuste más fino, aunque llevaría más tiempo para lograr una precisión estable.
-   - **Número de Ejemplos por Época (examples-per-epoch)**: Con 500 ejemplos por época, el modelo tiene suficientes datos para hacer ajustes significativos en cada iteración. Esto es especialmente importante en problemas de clasificación complejos como XOR, donde un mayor número de ejemplos ayuda a la red a "ver" más del espacio de entrada y ajustar los pesos en consecuencia.
+3. **Análisis de Parámetros y su Impacto en el Resultado**  
+   - **Tasa de Aprendizaje (learning-rate)**: Con un valor de 0.5, el perceptrón hace ajustes grandes en cada iteración. Esto acelera el proceso, pero puede hacer que el modelo se “pase” de la solución óptima. Una tasa de aprendizaje más baja podría hacer el ajuste más preciso, aunque llevaría más tiempo para lograr buenos resultados.
+   - **Número de Ejemplos por Época (examples-per-epoch)**: Con 500 ejemplos por época, el perceptrón tiene suficientes datos para aprender mejor en cada ciclo. Esto es particularmente útil en problemas difíciles como XOR, donde necesita “ver” muchos ejemplos para ajustarse adecuadamente.
 
-   La función objetivo XOR representa un desafío debido a su no linealidad. Esto implica que el perceptrón, que es un clasificador lineal, solo alcanzará una clasificación perfecta si los datos son linealmente separables. Dado que XOR no cumple con esta condición, es esperable que el modelo no logre un 100% de precisión, pero con los ajustes adecuados en la tasa de aprendizaje y el número de ejemplos, el perceptrón puede aproximar la clasificación correcta en la mayoría de los casos.
+   Elegir XOR como objetivo añade un desafío, ya que el perceptrón no puede resolver perfectamente problemas que no son linealmente separables. Sin embargo, puede aproximarse a una solución bastante buena ajustando sus pesos y sesgo.
 
-5. **Resultados y Visualización**  
-   La simulación en NetLogo produce una línea de decisión en el espacio tridimensional que intenta separar las dos clases de puntos. A lo largo de las épocas, la precisión del modelo aumenta y el error disminuye gradualmente, hasta estabilizarse en una precisión óptima cercana al 95%, aunque la clasificación no es perfecta debido a la naturaleza de la función XOR. La gráfica "Error vs. Epochs" permite visualizar esta mejora en tiempo real, y la opción de mostrar pesos permite observar los ajustes específicos realizados en el proceso de aprendizaje.
+4. **Resultados y Visualización**  
+   En la simulación de NetLogo, el perceptrón trata de trazar una línea de decisión en el espacio tridimensional para separar las dos clases de puntos. A medida que entrena, la precisión del modelo aumenta y el error disminuye, estabilizándose cerca de un 95% de precisión. Aunque el perceptrón no logra clasificar perfectamente todas las entradas de XOR, se aproxima bastante. La gráfica “Error vs. Epochs” permite visualizar esta mejora, y ver cómo los pesos cambian durante el aprendizaje también ayuda a entender su proceso de ajuste.
 
-6. **Conclusión**  
-   La simulación interactiva en NetLogo proporciona una visión visual y didáctica del funcionamiento de un perceptrón. Aunque el modelo no puede resolver perfectamente funciones no linealmente separables como XOR, los resultados obtenidos demuestran que el perceptrón puede aproximarse a una buena solución con una alta precisión. Esta implementación ofrece una herramienta valiosa para explorar y entender los conceptos fundamentales del aprendizaje en redes neuronales simples.
+5. **Conclusión**  
+   La simulación en NetLogo proporciona una manera interactiva y visual de entender cómo funciona un perceptrón. Aunque este modelo es simple y tiene sus limitaciones (como la imposibilidad de resolver XOR perfectamente), la simulación muestra cómo puede aprender a clasificar datos con un alto grado de precisión en muchos casos. Esta implementación es una herramienta educativa valiosa para explorar y comprender los fundamentos del aprendizaje en redes neuronales.
 
----
 
-¿Te gustaría agregar los datos de alguna corrida específica, como el número exacto de épocas necesarias para alcanzar la precisión máxima, o algún gráfico de la evolución del error? Esto podría complementar el análisis con resultados experimentales específicos.
 
 ![image](https://github.com/user-attachments/assets/9fe46253-fb17-42be-abdc-8aef369ac971)
 
