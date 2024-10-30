@@ -1,4 +1,4 @@
-<# Segundo_Parcial
+ Segundo_Parcial
 # Perceptron Netlogo
 
 
