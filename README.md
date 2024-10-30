@@ -24,7 +24,7 @@ El **Modelo (CalculadoraModel)** actúa como el núcleo del sistema. Recibe la e
 Los **Agentes** son los responsables de ejecutar operaciones específicas. Cada uno de ellos se especializa en una operación matemática en particular, como suma, resta, multiplicación o división.
 
 
-# Calculadora_cientifica
+# Calculadora cientifica kotlin
 1.Encapsulamiento
 El encapsulamiento es sobre mantener los detalles internos de una clase ocultos y permitir que se acceda a ellos de manera controlada. En la calculadora:
  Metodos Privados:Cree una clase llamada Calculadora, donde guardé las operaciones básicas (suma, resta, etc.) como métodos privados. Esto significa que no se pueden modificar directamente desde fuera de la clase.
