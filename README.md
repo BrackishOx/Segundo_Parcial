@@ -72,3 +72,7 @@ fun sumar(a: Double, b: Double): Double {
  
 al hacer la calculadora científica en Kotlin El encapsulamiento ayuda a proteger los datos, la herencia permite reutilizar el código y agregar nuevas funciones,
 y el polimorfismo facilita el uso de métodos con el mismo nombre para diferentes tipos. Estos principios hacen que el código sea más fácil de mantener y entender.
+
+
+![image](https://github.com/user-attachments/assets/2c6ec3e4-75e2-4190-89fd-9c7b5cff0dd0)
+
