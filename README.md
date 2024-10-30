@@ -76,3 +76,5 @@ y el polimorfismo facilita el uso de métodos con el mismo nombre para diferente
 
 ![image](https://github.com/user-attachments/assets/2c6ec3e4-75e2-4190-89fd-9c7b5cff0dd0)
 
+![image](https://github.com/user-attachments/assets/a34f8b3b-473e-4b8b-a60e-a3deb592bd3a)
+
