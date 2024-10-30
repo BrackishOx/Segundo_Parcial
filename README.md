@@ -1,7 +1,7 @@
  Segundo_Parcial
 # Perceptron Netlogo
 
-**El Perceptrón y su Implementación en NetLogo**
+**Perceptrón y Implementación en NetLogo**
 
 1. **Introducción al Perceptrón**  
    El perceptrón es una de las redes neuronales más sencillas, creada para resolver problemas de clasificación binaria (es decir, separar datos en dos grupos). Funciona como un clasificador que decide si una entrada pertenece a una clase o a otra, ajustando ciertos valores llamados “pesos” para darle más o menos importancia a cada característica de la entrada. La salida del perceptrón se calcula tomando una combinación de estas entradas ponderadas y pasándolas por una función que produce un valor binario (1 o -1, por ejemplo).
