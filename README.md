@@ -1,6 +1,6 @@
-# Segundo_Parcial
+<# Segundo_Parcial
 # Perceptron Netlogo
-![image](https://github.com/user-attachments/assets/2a61097c-cac9-494e-bf11-2ccfa3eefa07)
+![image](https://github.com/user-attachments/assets/9f9f994d-3b1b-4ee5-ab9c-c2b86ea94196)
 
 
 
