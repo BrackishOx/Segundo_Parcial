@@ -1,5 +1,7 @@
 # Segundo_Parcial
 # Perceptron Netlogo
+![image](https://github.com/user-attachments/assets/2a61097c-cac9-494e-bf11-2ccfa3eefa07)
+
 
 
 # Calculadora basada en paradigmas de agentes
